@@ -1,0 +1,52 @@
+.home{
+    position: relative;
+}
+
+.banner-img{
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, black 75%);
+    -webkit-mask-image: liner-gradient(to right, transparent, black 75%);
+   /* 
+  The CSS properties mask-image: linear-gradient(to right, transparent, black 75%); 
+  and -webkit-mask-image: linear-gradient(to right, transparent, black 75%); create a horizontal fade effect on an element.
+  The content will be transparent on the left and gradually fade in to become fully opaque on the right
+
+   "Here is a breakdown of what the code means:
+mask-image: This is the standard CSS property for applying a mask to an element. A mask uses an image, SVG, or a gradient to define the visibility of an element.
+-webkit-mask-image: This is a vendor-specific prefix that was used for older versions of browsers built 
+on the WebKit engine (e.g., Safari, and older versions of Chrome).
+ It is included for wider browser compatibility.
+linear-gradient(to right, ...): This creates a linear gradient that moves horizontally from left to right.
+transparent: This is the starting color of the gradient on the far left.
+The transparent color indicates that the element's content should be completely hidden (masked).
+black 75%: This is the ending color of the gradient. 
+In CSS masking, black signifies that the element's content should be fully visible (opaque).
+The 75% value means the transition from transparent to black is complete at the 75% mark, 
+leaving the remaining 25% on the right side of the element fully visible. 
+
+What happens to the content:-
+
+From the left edge to the 75% mark, the content will gradually fade in.
+The first portion of the element will be invisible.
+At the 75% point and beyond, the content will be completely visible.
+" */
+}
+
+.hero-caption{
+position:absolute;
+width: 100%;
+padding-left: 6%;
+bottom:0;
+}
+
+.caption-img{
+    width:90%;
+    max-width:420px;
+    margin-bottom: 30px;
+}
+
+.hero-caption p{
+
+    max-width: 700 px;
+    
+}
