@@ -1,7 +1,7 @@
 import React, {useRef, useEffect, useState } from 'react'
 import './TitleCards.css'
 import cards_data from '../../assets/cards/Cards_data'
-
+import { Link } from 'react-router-dom'
 
 const TitleCards = ({title, category}) => {
 
@@ -16,10 +16,6 @@ const TitleCards = ({title, category}) => {
     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NGFlYjhmMjRiZGFmOGNmZTk0NDU2ZGI5YjM0NDA2YiIsIm5iZiI6MTc1ODA4Mjc1Ny4wOTEsInN1YiI6IjY4Y2EzNmM1OTk2OTA2ZjM1NjY4MzMwMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7yDRAWhRJr_ryNWLc6cIDvgCxsxLdw_Sxz6kfbTU-gs'
   }
 };
-
-
-
-
 
 
 const handlewheel= (event)=> {
@@ -55,9 +51,9 @@ useEffect( () =>{
 
       <div className="card-list" ref={cardsRef}>
         
-        {/* You'll notice that movie, TV and person objects contain references to different file paths. 
-        In order to generate a fully working image URL, you'll need 3 pieces of data. 
-        Those pieces are a base_url, a file_size and a file_path.
+{/* You'll notice that movie, TV and person objects contain references to different file paths. 
+In order to generate a fully working image URL, you'll need 3 pieces of data. 
+Those pieces are a base_url, a file_size and a file_path.
 
 The first two pieces can be retrieved by calling the /configuration API and the third is the file path
  you're wishing to grab on a particular media object. Here's what a full image URL looks like if the 
@@ -67,13 +63,14 @@ https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg */}
 
 
         {apiData.map( (card, index) => {
-          return <div className="card" key={index} >
+
+          return <Link to={`/player/${card.id}`} className="card" key={index} >
             <img src={`https://image.tmdb.org/t/p/w500`+card.backdrop_path} alt="" />
             <p>{card.original_title}</p>
-          </div>
+          </Link>
 
         })} 
-
+    
         </div> 
     </div>
   )
