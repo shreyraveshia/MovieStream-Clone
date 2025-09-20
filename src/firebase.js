@@ -8,12 +8,12 @@ import { toast } from "react-toastify";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA_4yhVB5APKsmPXk54udCaD4yMd-XXqFs",
-  authDomain: "netflix-clone-c3f02.firebaseapp.com",
-  projectId: "netflix-clone-c3f02",
-  storageBucket: "netflix-clone-c3f02.firebasestorage.app",
-  messagingSenderId: "201027823497",
-  appId: "1:201027823497:web:4b8e2fddbad3e7d8d8e358"
+  apiKey: "AIzaSyAtF7_VQXumEeugoLqNblbrZzCJzBuLALQ",
+  authDomain: "moviestream-8ea65.firebaseapp.com",
+  projectId: "moviestream-8ea65",
+  storageBucket: "moviestream-8ea65.firebasestorage.app",
+  messagingSenderId: "997990581351",
+  appId: "1:997990581351:web:bba95dafd5822e4ee040c2"
 };
 
 // Initialize Firebase
